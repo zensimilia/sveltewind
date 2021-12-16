@@ -1,6 +1,6 @@
-# Svelte app with Tailwind CSS
+# Svelte + Tailwind CSS = ❤
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/zensimilia/sveltewind.
+This is a project template for [Svelte](https://svelte.dev) apps with [Tailwind CSS](https://tailwindcss.com) framework. It lives at https://github.com/zensimilia/sveltewind.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
@@ -82,3 +82,17 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## tailwindcss
+
+You can extend global [base styles](https://tailwindcss.com/docs/preflight) in root component `src/App.svelte`:
+
+```html
+<style global lang="postcss">
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+</style>
+```
+
+Customize your [configuration](https://tailwindcss.com/docs/configuration) in `tailwind.config.js` file.
